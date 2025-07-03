@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Domain User Management</h1>
+        
+        <h2 class="mt-4">Add Users</h2>
+        <form action="/add_users" method="post">
+            <div class="form-group">
+                <label for="usernames">Enter usernames (one per line):</label>
+                <textarea class="form-control" id="usernames" name="usernames" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Users</button>
+        </form>
+
+        <h2 class="mt-4">Delete Users</h2>
+        <form action="/delete_users" method="post">
+            <div class="form-group">
+                <label for="delete_usernames">Enter usernames to delete (one per line):</label>
+                <textarea class="form-control" id="delete_usernames" name="delete_usernames" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Delete Users</button>
+        </form>
+    </div>
+</body>
+</html>
