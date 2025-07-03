@@ -1,0 +1,7 @@
+DATABASE_URI = 'sqlite:///ad_web_manager.db'
+AD_SERVER = 'your_ad_server'
+AD_DOMAIN = 'your_domain'
+AD_USERNAME = 'your_username'
+AD_PASSWORD = 'your_password'
+AD_BASE_DN = 'DC=your_domain,DC=com'
+AD_USER_OU = 'OU=Users,DC=your_domain,DC=com'

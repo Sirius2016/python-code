@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD User Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Active Directory User Management</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('add_user') }}">Add User</a></li>
+                <li><a href="{{ url_for('delete_user') }}">Delete User</a></li>
+                <li><a href="{{ url_for('batch_add') }}">Batch Add Users</a></li>
+                <li><a href="{{ url_for('batch_delete') }}">Batch Delete Users</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to the AD User Management Tool</h2>
+        <p>Select an option from the menu to get started.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 AD User Management Tool</p>
+    </footer>
+</body>
+</html>

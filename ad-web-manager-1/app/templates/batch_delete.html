@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Delete Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Batch Delete Users</h1>
+        <form action="{{ url_for('batch_delete') }}" method="post">
+            <div class="form-group">
+                <label for="usernames">Select Users to Delete:</label>
+                <select name="usernames" id="usernames" multiple required>
+                    <!-- Options will be populated dynamically -->
+                    {% for user in users %}
+                        <option value="{{ user }}">{{ user }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger">Delete Selected Users</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+    </div>
+</body>
+</html>
